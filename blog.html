@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog page</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
+    <!-- css links -->
+    <link rel="stylesheet" href="css/style.css?=gfhhy" />
+    <link rel="stylesheet" href="css/responsive.css?=gdfgth" />
+</head>
+
+<body>
+    <div class="main-loader">
+        <!-- Loader 1 -->
+        <div class="loader1 inner-loader">
+            <img class="loader-logo" src="img/loader1.svg" alt="">
+        </div>
+
+    </div>
+
+    <!-- header -->
+    <header class="site-header ">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg ">
+
+                <a class="navbar-brand" href="index.html"><img src="img/site-logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav dark">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FAA-part.html">FAA Part 107 Prep Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="drone-buisness-guide.html">Drone Business Guide </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="niche-buisness-guide.html">Niche Business Guides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing-bundles.html">Pricing & Bundles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="hdr-cta">
+                        <a class="cta cta-white" href="contact.html">Enroll Now</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--  banner sec -->
+    <section class="secondary-banner ovr-hdn dark pos-rev" style="background-image: url(img/bnr-bg.png);">
+        <div class="container">
+            <div class="secondary-bnr-innr">
+                <div class="bnnr-hd">
+                    <h1>Drone Business & FAA Part 107 Resources </h1>
+                </div>
+                <div class="bnnr-para">
+                    <p>Learn how to become certified, start a drone business, choose a profitable
+                        niche, and grow with confidence.</p>
+                </div>
+                <div class="bnr-search-bar">
+                    <form action="">
+                        <input type="text" placeholder="Search articles...">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="vertqo-img">
+                    <img src="img/Vertiqo-txt.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 2 -->
+    <section class="featured-sec pt-120 pb-120">
+        <div class="container">
+            <div class="featured-div  sec-fadeup">
+                <div class="dotted-para">
+                    <h6>Featured Article</h6>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="featured-article-cont cmmn-row row  sec-fadeup">
+                <div class="col-lg-6">
+                    <div class="featured-article-img">
+                        <img src="img/start-business-img.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="featured-article-txt">
+                        <div class="featured-article-hd">
+                            <h3>How to Start a Drone Business in the <strong>United States</strong></h3>
+                        </div>
+                        <div class="featured-article-para">
+                            <p>Learn the basic steps to earn your Part 107, choose services, set up your
+                                business, and find clients.</p>
+                        </div>
+                        <div class="featured-article-btn">
+                            <a href="#" class="cta">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap pt-120  sec-fadeup">
+                <div class="cat-bar">
+                    <span class="cat-label">Blog Categories:</span>
+                    <div class="cat-scroll" id="catScroll">
+                        <button class="tab-pill" data-filter="part107">Part 107 Certification</button>
+                        <button class="tab-pill" data-filter="startup">Drone Business Startup</button>
+                        <button class="tab-pill" data-filter="niches">Drone Niches</button>
+                        <button class="tab-pill" data-filter="marketing">Marketing & Sales</button>
+                        <button class="tab-pill" data-filter="operations">Operations</button>
+                    </div>
+                </div>
+
+                <div class="grid" id="cardGrid">
+                    <div class="card" data-category="part107">
+                        <div class="thumb" style="background-image:url('./img/category-1.png')">
+                            <span class="badge">Part 107 Certification</span>
+                        </div>
+                        <div class="crd-bdy">
+                            <h3 class="card-title">Beginner's Guide to FAA Part 107</h3>
+                            <p class="card-desc">Learn the certification process, exam requirements, and tips to become
+                                a confident commercial drone pilot.</p>
+                            <div class="card-meta">6 min read</div>
+                            <a href="#" class="cta cta-white">Read Article</a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="niches">
+                        <div class="thumb" style="background-image:url('./img/category-2.png')">
+                            <span class="badge">Drone Niches</span>
+                        </div>
+                        <div class="crd-bdy">
+                            <h3 class="card-title">Aviation Weather Reports</h3>
+                            <p class="card-desc">Understand METARs, weather conditions, and how they impact safe and
+                                successful drone flights.</p>
+                            <div class="card-meta">4 min read</div>
+                            <a href="#" class="cta cta-white">Read Article</a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="marketing">
+                        <div class="thumb" style="background-image:url('./img/category-3.png')">
+                            <span class="badge">Marketing & Sales</span>
+                        </div>
+                        <div class="crd-bdy">
+                            <h3 class="card-title">Understanding Airspace Classes</h3>
+                            <p class="card-desc">Explore controlled airspace, flight restrictions, and where you can
+                                legally operate your drone.</p>
+                            <div class="card-meta">3 min read</div>
+                            <a href="#" class="cta cta-white">Read Article</a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="part107">
+                        <div class="thumb" style="background-image:url('./img/category-4.png')">
+                            <span class="badge">Part 107 Certification</span>
+                        </div>
+                        <div class="crd-bdy">
+                            <h3 class="card-title">Why Interactive Learning Works</h3>
+                            <p class="card-desc">Build real-world skills through quizzes, scenarios, and hands-on
+                                practice instead of passive videos.</p>
+                            <div class="card-meta">8 min read</div>
+                            <a href="#" class="cta cta-white">Read Article</a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="part107">
+                        <div class="thumb" style="background-image:url('./img/category-5.png')">
+                            <span class="badge">Part 107 Certification</span>
+                        </div>
+                        <div class="crd-bdy">
+                            <h3 class="card-title">Avoid Common Drone Pilot Mistakes</h3>
+                            <p class="card-desc">Discover the most common beginner errors and learn how to fly safely
+                                and confidently.</p>
+                            <div class="card-meta">6 min read</div>
+                            <a href="#" class="cta cta-white">Read Article</a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="startup">
+                        <div class="thumb" style="background-image:url('./img/category-6.png')">
+                            <span class="badge">Drone Business</span>
+                        </div>
+                        <div class="crd-bdy">
+                            <h3 class="card-title">Prepare for FAA Knowledge Test</h3>
+                            <p class="card-desc">Know what to expect on exam day with practical study tips and focused
+                                preparation strategies.</p>
+                            <div class="card-meta">6 min read</div>
+                            <a href="#" class="cta cta-white">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="empty-state" id="emptyState">No articles found in this category yet.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!--section 3: roadmap-sec -->
+    <section class="roadmap-sec ">
+        <div class="container-fluid">
+            <div class="roadmap-content-cont sec-with-bg attach-fixed dark pt-100 pb-100"
+                style="background-image: url('./img/roadmap-bg.png');">
+                <div class="roadmap-content  sec-fadeup">
+                    <div class="roadmap-hd">
+                        <h3>Start Your Drone Business With a Clear Roadmap</h3>
+                    </div>
+                    <div class="roadmap-para">
+                        <p>Download a free starter checklist to learn the first steps toward certification and
+                            building a drone business.</p>
+                    </div>
+                    <div class="bnr-search-bar roadmap">
+                        <form action="">
+                            <input type="email" placeholder="Enter your email">
+                        </form>
+                    </div>
+                    <div class="roadmap-btn">
+                        <button type="submit" class="cta cta-white">Get the Free Checklist</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ssection 4: drone-buisness -->
+    <section class="drone-buisness pt-120 pb-120">
+        <div class="container">
+            <div class="droneb-inner">
+                <div class="drn-b-top d-flex  sec-fadeup">
+                    <div class="drn-hdng  sec-fadeup">
+                        <h2>Ready to Go <br>From Learning to <strong>Launching?</strong></h2>
+                    </div>
+                    <div class="b-top-cntnt  sec-fadeup">
+                        <div class="b-cntnt-in">
+                            <p>Explore Vertiqo programs designed to help <br> you earn your certification and build
+                                a real drone business.</p>
+                            <div class="faa-btns d-flex">
+                                <a class="cta" href="">Explore Programs</a>
+                                <a class="cta cta-white  cta-with-border" href="">View Pricing</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="btm-drn-sec text-center pos-rev">
+                    <img class="btm-txt" src="img/text-grp.png" alt="">
+                    <img class="btm-drn" src="img/btm-drn.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- footer -->
+   <footer class="site-footer grayish-bg dark pt-100 container-100">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="foot-row d-flex">
+                    <div class="foot-col foot-main-col">
+                        <div class="foot-logo">
+                            <a href="index.html"><img src="img/foot-logo.png" alt=""></a>
+                        </div>
+                        <div class="foot-para">
+                            <p>Empowering drone pilots to become successful entrepreneurs through professional
+                                training
+                                and
+                                business guidance.</p>
+                        </div>
+
+                    </div>
+                    <div class="foot-col ready-col">
+                        <h6>Ready to Launch?</h6>
+                        <ul>
+                            <li><a href="FAA-part.html">Get FAA Certified</a></li>
+                            <li><a href="">Explore Programs</a></li>
+                            <li><a href="contact.html">Join Today</a></li>
+                        </ul>
+                    </div>
+                    <div class="foot-col company-col">
+                        <h6>Company</h6>
+                        <ul>
+                            <li><a href="about.html">About Vertiqo Group</a></li>
+                            <li><a href="review-stories.html">Reviews & Success Stories</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="foot-col legal-col">
+                        <h6>Legal</h6>
+                        <ul>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and Conditions</a></li>
+                            <li><a href="">Refund Policy</a></li>
+                            <li><a href="">More</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="divider foot-divider"></div>
+            <div class="container">
+                <div class="foot-btm d-flex">
+                    <div class="copyright">
+                        <p>© 2026 Vertiqo Group. All Right Reserved.</p>
+                    </div>
+                    <div class="back-top">
+                        <a href="#" class="back-top-btn">Back To Top <span><img src="img/arrw-top.png"
+                                    alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/MotionPathPlugin.min.js"></script>
+
+    <!-- Slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis/dist/lenis.min.js"></script>
+
+    <!-- Custom -->
+    <script src="js/script.js?=vggfhghfjbf"></script>
+
+
+</body>
+
+</html>
