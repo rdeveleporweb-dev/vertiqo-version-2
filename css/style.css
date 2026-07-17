@@ -4351,9 +4351,10 @@ img.instr-drone {
 
 /* drone timeline animtion css */
 /* svg */
-.mobile-timeline{
+.mobile-timeline {
     display: none;
 }
+
 .roadmap-sec {
     position: relative;
     width: 100%;

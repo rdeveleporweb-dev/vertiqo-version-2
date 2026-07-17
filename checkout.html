@@ -332,7 +332,7 @@
 
 
     <!-- footer -->
-   <footer class="site-footer grayish-bg dark pt-100 container-100">
+    <footer class="site-footer grayish-bg dark pt-100 container-100">
         <div class="container-fluid">
             <div class="container">
                 <div class="foot-row d-flex">
@@ -393,7 +393,7 @@
         </div>
     </footer>
 
-    
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -417,6 +417,90 @@
 
     <!-- Custom -->
     <script src="js/script.js?=gfhynjhy"></script>
+
+    <script>
+
+        // checkout page js--------------------------------------------------------------
+        const paymentRadios = document.querySelectorAll('input[name="payment"]');
+        const cardForm = document.getElementById('cardForm');
+
+        // Hide by default
+        cardForm.classList.add('hide');
+
+        paymentRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                // Reset all methods
+                document.querySelectorAll('.other-method').forEach(method => {
+                    method.style.backgroundColor = '';
+                    method.style.color = '';
+                });
+
+                // Active method style
+                const parent = this.closest('.other-method');
+                if (parent) {
+                    parent.style.backgroundColor = '#373F48';
+                    parent.style.color = '#fff';
+                }
+
+                // Show Card Form only when Card radio is selected
+                if (this.value === 'card') {
+                    cardForm.classList.remove('hide');
+                } else {
+                    cardForm.classList.add('hide');
+                }
+            });
+        });
+        // /custom dropdown from counry/
+
+        const customSelect = document.querySelector('.custom-select');
+        const selected = document.querySelector('.selected-option');
+        const options = document.querySelectorAll('.options li');
+        const hiddenInput = document.querySelector('input[name="country"]');
+
+        selected.addEventListener('click', () => {
+            customSelect.classList.toggle('active');
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                selected.childNodes[0].textContent = option.textContent;
+                hiddenInput.value = option.dataset.value;
+                customSelect.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!customSelect.contains(e.target)) {
+                customSelect.classList.remove('active');
+            }
+        });
+
+        // /custom dropdown for state/
+
+        const customSelectS = document.querySelector('.custom-select-state');
+        const selectedS = document.querySelector('.selected-option-state');
+        const optionsS = document.querySelectorAll('.optionsstate li');
+        const hiddenInputS = document.querySelector('input[name="state"]');
+
+        selectedS.addEventListener('click', () => {
+            customSelectS.classList.toggle('active');
+        });
+
+        optionsS.forEach(option => {
+            option.addEventListener('click', () => {
+                selectedS.childNodes[0].textContent = option.textContent;
+                hiddenInputS.value = option.dataset.value;
+                customSelectS.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!customSelectS.contains(e.target)) {
+                customSelectS.classList.remove('active');
+            }
+        });
+
+    </script>
 
 </body>
 

@@ -590,7 +590,7 @@ jQuery(document).ready(function () {
     $emptyState.toggleClass('show', visibleCount === 0);
   });
 
-  // quiz steps js 
+  // quiz steps js -------------------------------------------------------
   const totalSteps = 5;
   let currentStep = 1;
 
@@ -666,7 +666,7 @@ jQuery(document).ready(function () {
   });
 
 
-  // review and success slider
+  // review and success slider----------------------------------------------------------------------
   $(".success-slider").on("init reInit afterChange", function (e, slick, currentSlide) {
     let i = (currentSlide || 0) + 1;
     let width = (i / slick.slideCount) * 100;
@@ -700,7 +700,7 @@ jQuery(document).ready(function () {
     ]
   });
 
-  // review -slider
+  // review -slider-----------------------------------------------------
   $(".review-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -725,7 +725,7 @@ jQuery(document).ready(function () {
 
 });
 
-// header scroll js
+// header scroll js--------------------------------------------------------
 $(window).on("scroll", function () {
   if ($(this).scrollTop() > 50) {
     $(".site-header").addClass("scrolled");
@@ -772,7 +772,7 @@ $(window).on("scroll resize", function () {
 });
 // header scroll js ends
 
-// loader animation main animation timeline
+// loader animation main animation timeline--------------------------------------------------
 
 // NEW: detect context
 const isHome = !!document.querySelector(".home-loader-trigger");
@@ -953,7 +953,7 @@ tl.add(() => {
 
 
 
-// flying drone sec
+// flying drone sec----------------------------------------------------------------
 
 const flyingDrone = gsap.matchMedia();
 
@@ -1003,9 +1003,7 @@ flyingDrone.add("(min-width: 768px)", () => {
 
 });
 
-
-
-//  drone js 
+//  drone js -------------------------------------------------------------
 $(function () {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -1198,9 +1196,40 @@ $(function () {
     let stepThresholds = getStepThresholds();
 
     function updateSteps(p) {
-      // Your existing updateSteps() code...
-    }
+      steps.forEach((el, i) => {
+        const threshold = stepThresholds[i];
+        const shouldShow = p >= threshold - thresholdBuffer;
 
+        if (shouldShow && el.dataset.shown === "0") {
+          el.dataset.shown = "1";
+          const content = el.querySelector('.rstep-cntnt');
+          const circle = el.querySelector('.rstep-circle');
+
+          gsap.to(circle, {
+            scale: 1,
+            duration: 0.4,
+            ease: "back.out(1.7)"
+          });
+
+          gsap.to(content, {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            delay: 0.1
+          });
+        } else if (!shouldShow && el.dataset.shown === "1") {
+          el.dataset.shown = "0";
+          const content = el.querySelector('.rstep-cntnt');
+          const circle = el.querySelector('.rstep-circle');
+          const dir = el.classList.contains('peak') ? -1 : 1;
+
+          gsap.to(circle, { scale: 0, duration: 0.3 });
+          gsap.to(content, { opacity: 0, scale: 0.35, y: dir * 26, duration: 0.3 });
+        }
+      });
+    }
     ScrollTrigger.create({
       trigger: section,
       start: "top top",
